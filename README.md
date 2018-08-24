@@ -1,6 +1,6 @@
 # **Angular**-practice
-##First steps
-#####List of application:
+## First steps
+### List of application:
 ```
 helloapp
 ```
