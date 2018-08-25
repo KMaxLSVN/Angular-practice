@@ -2,6 +2,6 @@
 ## First steps
 ### List of application:
 ```
-hello applicattion
-purchase application JS
+*hello applicattion
+*purchase application JS
 ```
