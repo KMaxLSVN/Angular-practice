@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <span *ngIf = "tasks.length>0; else elseBlock" >Number of tasks: {{tasks.length}}</span>
+  <ng-template #elseBlock>
+      <span>No tasks yet...</span>
+  </ng-template>
+</mat-toolbar>
+
+<div class="wrapper">
+  <div class="content">
+      <mat-card>
+          <form [formGroup]="form" (submit)="submit()" novalidate>
+            <mat-form-field class="task-input">
+              <input matInput formControlName="task" placeholder="Task description">
+            </mat-form-field>
+            <button mat-raised-button color="primary">Add</button>
+          </form>
+      </mat-card>
+      
+      <div *ngFor="let task of tasks; let i = index" class="task-list">
+          <mat-card class="task-item">
+            <button mat-icon-button color="warn" (click)="deleteTask(i)">
+              <mat-icon>clear</mat-icon>
+            </button>
+            <span>{{task}}</span>
+          </mat-card>
+      </div>
+  </div>
+</div>
+
